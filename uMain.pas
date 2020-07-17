@@ -38,12 +38,15 @@ var
   a, r, x, y: real;
   h, w: integer;
 begin
+  // calculate circle width and height
   w := Round((Self.Width - meLog.Width - 2) / 2);
   h := Round((Self.Height - Panel1.Height - 2) / 2);
 
+  // generate random position
   a := random * 2 * Pi;
   r := (w / 2) * Sqrt(random);
 
+  // get cartesian coordinate
   x := r * cos(a);
   y := r * sin(a);
 
@@ -56,7 +59,6 @@ var
 begin
   for i := 1 to 1000 do
     btDraw1Click(Self);
-
 end;
 
 procedure TfrmMain.btClearClick(Sender: TObject);
