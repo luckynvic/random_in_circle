@@ -42,6 +42,7 @@ begin
   w := Round((Self.Width - meLog.Width - 2) / 2);
   h := Round((Self.Height - Panel1.Height - 2) / 2);
 
+  // https://programming.guide/random-point-within-circle.html
   // generate random position
   a := random * 2 * Pi;
   r := (w / 2) * Sqrt(random);
